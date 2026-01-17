@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="AXIOM Digital Agency - Engineering Digital Authority through premium web development, SEO optimization, and Google Maps business solutions."> 
+  <meta name="keywords" content="digital agency, web development, SEO optimization, Google Maps business, premium web design"> 
+  <title>AXIOM | Engineering Digital Authority</title> <!-- Fonts & Icons --> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Stylesheets --> 
+  <link rel="stylesheet" href="css/style.css"> <!-- Favicon --> 
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"> 
+ <style type="text/css" id="dcoder_stylesheet">/* 
+ * AXIOM Digital Agency - Premium Dark Luxury Theme
+ * CSS Stylesheet
+ */
+
+/* CSS Variables for Consistent Theme */
+:root {
+    --color-primary: #0a0a0a;
+    --color-secondary: #1a0000;
+    --color-accent-red: #8B0000;
+    --color-accent-gold: #D4AF37;
+    --color-text-light: #f5f5f5;
+    --color-text-dark: #111;
+    --color-text-gray: #aaa;
+    --transition-default: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    --border-radius: 4px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --box-shadow-light: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent-red);
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-gray);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-default);
+}
+
+/* Layout & Structure */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+section {
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+    transition: all var(--transition-default);
+}
+
+header.scrolled {
+    padding: 0.7rem 0;
+    box-shadow: var(--box-shadow);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    color: var(--color-accent-red);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+nav a {
+    font-weight: 500;
+    position: relative;
+    padding: var(--spacing-xs) 0;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent-gold);
+    transition: width var(--transition-default);
+}
+
+nav a:hover {
+    color: var(--color-accent-gold);
+}
+
+nav a:hover:after,
+nav a.active:after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 0, 0, 0.85) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeInUp 1.2s var(--transition-slow) both;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: var(--color-accent-red);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all var(--transition-default);
+    cursor: pointer;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-red);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: #9d0000;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-light);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 2px solid var(--color-accent-gold);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-light);
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.service-card {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-default);
+    border: 1px solid rgba(139, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent-red), var(--color-accent-gold));
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow);
+    border-color: rgba(139, 0, 0, 0.3);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--color-accent-gold);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Why AXIOM Section */
+.why-axiom {
+    background-color: var(--color-secondary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.feature-card {
+    text-align: center;
+    padding: var(--spacing-lg);
+    transition: all var(--transition-default);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-accent-red), #5a0000);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    font-size: 1.8rem;
+    color: var(--color-accent-gold);
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    height: 300px;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-lg);
+    background: linear-gradient(transparent, rgba(10, 10, 10, 0.9));
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all var(--transition-default);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--color-secondary);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--color-accent-gold);
+    width: 30px;
+}
+
+.phone-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xs);
+}
+
+.contact-form {
+    background-color: var(--color-primary);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(139, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    color: var(--color-text-light);
+    font-family: 'Inter', sans-serif;
+    transition: all var(--transition-default);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--color-accent-red);
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.2);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #050505;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    border-top: 1px solid rgba(139, 0, 0, 0.2);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logo span {
+    color: var(--color-accent-red);
+}
+
+.copyright {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    color: var(--color-text-gray);
+    font-size: 0.9rem;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    transition: all var(--transition-default);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+/* Page Transitions */
+.page {
+    display: none;
+    animation: fadeIn 0.8s var(--transition-default) both;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    .hero h1 { font-size: 3.2rem; }
+    .services-grid,
+    .features-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background-color: var(--color-secondary);
+        box-shadow: var(--box-shadow);
+        transition: right var(--transition-default);
+        padding: var(--spacing-lg);
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .hero h1 { font-size: 2.5rem; }
+    section { padding: var(--spacing-lg) 0; }
+    .container { padding: 0 var(--spacing-sm); }
+}</style></head> 
+ <body> <!-- WhatsApp Button --> <a href="https://wa.me/254785814973?text=Hello%20AXIOM%2C%20I'm%20interested%20in%20your%20services" class="whatsapp-button" target="_blank" aria-label="Contact AXIOM on WhatsApp"> <i class="fab fa-whatsapp"></i> </a> <!-- Header & Navigation --> 
+  <header id="header"> 
+   <div class="container header-container"> <a href="#home" class="logo">AXI<span>OM</span></a> <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu"> <i class="fas fa-bars"></i> </button> 
+    <nav id="mainNav"> 
+     <ul> 
+      <li><a href="#home" class="nav-link active">Home</a></li> 
+      <li><a href="#services" class="nav-link">Services</a></li> 
+      <li><a href="#why-axiom" class="nav-link">Why AXIOM</a></li> 
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li> 
+      <li><a href="#contact" class="nav-link">Contact</a></li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> <!-- Main Content --> 
+  <main id="pageContent"> <!-- Home Page --> 
+   <section id="home" class="page active hero"> 
+    <div class="container"> 
+     <div class="hero-content"> 
+      <h1>Engineering <span>Digital Authority</span></h1> 
+      <p>AXIOM transforms businesses into dominant digital forces. Through precision web development, strategic SEO, and comprehensive Google Maps optimization, we build your online presence to command respect and drive results.</p> 
+      <div class="cta-buttons"> <a href="#contact" class="btn btn-primary">Get Started</a> <a href="#contact" class="btn btn-secondary">Contact AXIOM</a> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Services Page --> 
+   <section id="services" class="page"> 
+    <div class="container"> 
+     <h2>Our Services</h2> 
+     <p>AXIOM delivers comprehensive digital solutions engineered for business growth and market dominance.</p> 
+     <div class="services-grid"> 
+      <div class="service-card"> 
+       <div class="service-icon"> <i class="fas fa-code"></i> 
+       </div> 
+       <h3>Web Development</h3> 
+       <p>Custom, responsive websites engineered for speed, user experience, and conversion. We build digital foundations that perform flawlessly across all devices and platforms.</p> 
+       <ul> 
+        <li>Custom responsive design</li> 
+        <li>Blazing-fast performance</li> 
+        <li>E-commerce solutions</li> 
+        <li>Ongoing maintenance</li> 
+       </ul> 
+      </div> 
+      <div class="service-card"> 
+       <div class="service-icon"> <i class="fas fa-chart-line"></i> 
+       </div> 
+       <h3>SEO Optimization</h3> 
+       <p>Strategic search engine optimization designed to increase visibility, drive qualified traffic, and establish your digital authority in competitive markets.</p> 
+       <ul> 
+        <li>Local SEO dominance</li> 
+        <li>Ranking acceleration</li> 
+        <li>Traffic growth strategy</li> 
+        <li>Competitor analysis</li> 
+       </ul> 
+      </div> 
+      <div class="service-card"> 
+       <div class="service-icon"> <i class="fas fa-map-marked-alt"></i> 
+       </div> 
+       <h3>Google Maps Business Setup</h3> 
+       <p>Complete Google Business Profile optimization to ensure maximum visibility in local searches, driving foot traffic and improving local search rankings.</p> 
+       <ul> 
+        <li>Business registration</li> 
+        <li>Profile optimization</li> 
+        <li>Review management</li> 
+        <li>Local ranking strategy</li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Why AXIOM Page --> 
+   <section id="why-axiom" class="page why-axiom"> 
+    <div class="container"> 
+     <h2>Why Choose AXIOM</h2> 
+     <p>We don't just build websites—we engineer digital authority through precision execution and results-focused strategies.</p> 
+     <div class="features-grid"> 
+      <div class="feature-card"> 
+       <div class="feature-icon"> <i class="fas fa-bullseye"></i> 
+       </div> 
+       <h3>Results Driven</h3> 
+       <p>Every strategy is engineered with measurable outcomes in mind. We focus on metrics that matter to your business growth.</p> 
+      </div> 
+      <div class="feature-card"> 
+       <div class="feature-icon"> <i class="fas fa-cogs"></i> 
+       </div> 
+       <h3>Precision Execution</h3> 
+       <p>Our meticulous approach ensures every detail is optimized for performance, from code structure to SEO implementation.</p> 
+      </div> 
+      <div class="feature-card"> 
+       <div class="feature-icon"> <i class="fas fa-rocket"></i> 
+       </div> 
+       <h3>Business Growth Focus</h3> 
+       <p>We align digital strategies with your business objectives, creating solutions that drive revenue and market expansion.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Portfolio Page --> 
+   <section id="portfolio" class="page"> 
+    <div class="container"> 
+     <h2>Our Portfolio</h2> 
+     <p>A showcase of premium digital solutions engineered for industry leaders and ambitious businesses.</p> 
+     <div class="portfolio-grid"> 
+      <div class="portfolio-item"> 
+       <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1074&amp;q=80" alt="Luxury Real Estate Website"> 
+       <div class="portfolio-overlay"> 
+        <h3>Luxury Real Estate Platform</h3> 
+        <p>Custom property management system with virtual tours</p> 
+       </div> 
+      </div> 
+      <div class="portfolio-item"> 
+       <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1115&amp;q=80" alt="Financial Services Dashboard"> 
+       <div class="portfolio-overlay"> 
+        <h3>Financial Services Dashboard</h3> 
+        <p>Secure client portal with real-time analytics</p> 
+       </div> 
+      </div> 
+      <div class="portfolio-item"> 
+       <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" alt="E-commerce Solution"> 
+       <div class="portfolio-overlay"> 
+        <h3>Premium E-commerce Solution</h3> 
+        <p>High-conversion online store with inventory management</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> <!-- Contact Page --> 
+   <section id="contact" class="page contact-section"> 
+    <div class="container"> 
+     <h2>Contact Us</h2> 
+     <p>Ready to engineer your digital authority? Connect with AXIOM today.</p> 
+     <div class="contact-container"> 
+      <div class="contact-info"> 
+       <h3>Get In Touch</h3> 
+       <p>Our team is ready to discuss your project and outline a strategy for digital dominance.</p> 
+       <div class="contact-item"> <i class="fas fa-phone-alt"></i> 
+        <div> 
+         <p>Phone Number</p> 
+         <div class="phone-number">
+           0785814973 
+         </div> 
+        </div> 
+       </div> 
+       <div class="contact-item"> <i class="fas fa-envelope"></i> 
+        <div> 
+         <p>Email Address</p> 
+         <p>contact@axiom-digital.com</p> 
+        </div> 
+       </div> 
+       <div class="contact-item"> <i class="fas fa-map-marker-alt"></i> 
+        <div> 
+         <p>Business Hours</p> 
+         <p>Monday - Friday: 8AM - 6PM</p> 
+         <p>Saturday: 9AM - 1PM</p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="contact-form"> 
+       <form id="contactForm"> 
+        <div class="form-group"> <label for="name">Full Name</label> 
+         <input type="text" id="name" class="form-control" placeholder="Enter your name" required> 
+        </div> 
+        <div class="form-group"> <label for="email">Email Address</label> 
+         <input type="email" id="email" class="form-control" placeholder="enter your email" ,required> 
+        </div> 
+        <div class="form-group"> <label for="service">Service Interested In</label> <select id="service" class="form-control" required> <option value="">Select a service</option> <option value="web-development">Web Development</option> <option value="seo">SEO Optimization</option> <option value="google-maps">Google Maps Business Setup</option> <option value="multiple">Multiple Services</option> </select> 
+        </div> 
+        <div class="form-group"> <label for="message">Project Details</label> <textarea id="message" class="form-control" placeholder="Tell us about your project" required></textarea> 
+        </div> <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+  </main> <!-- Footer --> 
+  <footer> 
+   <div class="container"> 
+    <div class="footer-content"> 
+     <div class="footer-logo">
+       AXI<span>OM</span> 
+     </div> 
+     <p>Engineering Digital Authority for ambitious businesses</p> 
+     <div class="copyright"> 
+      <p>© 2026 AXIOM Digital Agency. All Rights Reserved.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> <!-- JavaScript --> 
+  <script src="js/script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">/**
+ * AXIOM Digital Agency - Main JavaScript
+ * Handles navigation, animations, and interactions
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Elements
+    const header = document.getElementById('header');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+    const contactForm = document.getElementById('contactForm');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    /**
+     * Initialize the website functionality
+     */
+    function init() {
+        setupEventListeners();
+        setupAnimations();
+        setActivePage('home');
+        
+        // Initialize header scroll effect
+        updateHeaderOnScroll();
+    }
+    
+    /**
+     * Set up all event listeners
+     */
+    function setupEventListeners() {
+        // Header scroll effect
+        window.addEventListener('scroll', updateHeaderOnScroll);
+        
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        
+        // Navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', handleNavigation);
+        });
+        
+        // Contact form submission
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleFormSubmit);
+        }
+        
+        // Service cards hover effects
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', enhanceCardHover);
+            card.addEventListener('mouseleave', resetCardHover);
+        });
+        
+        // Portfolio item interactions
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', handlePortfolioClick);
+        });
+        
+        // Window resize for responsive adjustments
+        window.addEventListener('resize', handleResize);
+    }
+    
+    /**
+     * Set up scroll animations
+     */
+    function setupAnimations() {
+        // Set initial state for animated elements
+        const animatedElements = document.querySelectorAll('.service-card, .feature-card, .portfolio-item');
+        animatedElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+        
+        // Trigger animations on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Initial trigger
+        setTimeout(animateOnScroll, 100);
+    }
+    
+    /**
+     * Handle window scroll for header effect
+     */
+    function updateHeaderOnScroll() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+    
+    /**
+     * Toggle mobile menu visibility
+     */
+    function toggleMobileMenu() {
+        mainNav.classList.toggle('active');
+        mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    }
+    
+    /**
+     * Handle navigation between pages
+     * @param {Event} e - Click event
+     */
+    function handleNavigation(e) {
+        e.preventDefault();
+        
+        // Get target page ID from href
+        const targetId = this.getAttribute('href').substring(1);
+        
+        // Set active page
+        setActivePage(targetId);
+        
+        // Update active nav link
+        updateActiveNavLink(this);
+        
+        // Close mobile menu if open
+        closeMobileMenu();
+        
+        // Scroll to top of page (for mobile)
+        window.scrollTo(0, 0);
+    }
+    
+    /**
+     * Set active page and show it
+     * @param {string} pageId - ID of the page to show
+     */
+    function setActivePage(pageId) {
+        // Hide all pages
+        pages.forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Show target page
+        const targetPage = document.getElementById(pageId);
+        if (targetPage) {
+            targetPage.classList.add('active');
+        }
+    }
+    
+    /**
+     * Update active navigation link
+     * @param {HTMLElement} clickedLink - The clicked navigation link
+     */
+    function updateActiveNavLink(clickedLink) {
+        navLinks.forEach(navLink => {
+            navLink.classList.remove('active');
+        });
+        clickedLink.classList.add('active');
+    }
+    
+    /**
+     * Close mobile menu
+     */
+    function closeMobileMenu() {
+        if (mainNav.classList.contains('active')) {
+            mainNav.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    }
+    
+    /**
+     * Handle contact form submission
+     * @param {Event} e - Submit event
+     */
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+        
+        // In a real implementation, you would send this data to a server
+        // For this example, we'll show a success message
+        showSuccessMessage(name, email, service);
+        
+        // Reset form
+        contactForm.reset();
+    }
+    
+    /**
+     * Show success message after form submission
+     * @param {string} name - User's name
+     * @param {string} email - User's email
+     * @param {string} service - Selected service
+     */
+    function showSuccessMessage(name, email, service) {
+        // Create a more elegant success message
+        const message = `Thank you, ${name}! Your message has been sent. We'll contact you at ${email} regarding ${service} soon.`;
+        
+        // You could replace this with a modal or toast notification
+        alert(message);
+    }
+    
+    /**
+     * Enhance service card hover effect
+     */
+    function enhanceCardHover() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+    }
+    
+    /**
+     * Reset service card hover effect
+     */
+    function resetCardHover() {
+        this.style.transform = 'translateY(-10px) scale(1)';
+    }
+    
+    /**
+     * Handle portfolio item click
+     */
+    function handlePortfolioClick() {
+        const title = this.querySelector('h3').textContent;
+        const message = `Viewing project: ${title}\n\nThis is a premium project showcase. Contact us to discuss similar solutions for your business.`;
+        
+        // In a real implementation, you might open a modal with project details
+        alert(message);
+    }
+    
+    /**
+     * Animate elements when they come into view
+     */
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.service-card, .feature-card, .portfolio-item');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+    
+    /**
+     * Handle window resize for responsive adjustments
+     */
+    function handleResize() {
+        // Close mobile menu on resize if window is wide enough
+        if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
+            closeMobileMenu();
+        }
+    }
+    
+    // Initialize the website
+    init();
+});</script></body></html>

@@ -1,0 +1,4 @@
+127.0.0.1 - - [17/Jan/2026 14:41:37] "GET /?password=aa5d1382-db0e-4237-9b59-d9cef097d0a3 HTTP/1.1" 200 -
+172.16.0.1 - - [17/Jan/2026 14:41:38] "GET /?_gl=1*sj160i*_gcl_au*OTY5MTM1MDYwLjE3Njg2NjAxMzk.*_ga*MTQ0Nzk0NzQwMS4xNzY4NjYwMDI5*_ga_8NW18Q4WF2*czE3Njg2NjAxMzkkbzEkZzEkdDE3Njg2NjAzMDAkajYwJGwwJGgxMDQ4OTQwNjUy&password=aa5d1382-db0e-4237-9b59-d9cef097d0a3 HTTP/1.1" 200 -
+172.16.0.1 - - [17/Jan/2026 14:41:43] "GET /css/style.css?password=aa5d1382-db0e-4237-9b59-d9cef097d0a3 HTTP/1.1" 200 -
+172.16.0.1 - - [17/Jan/2026 14:41:44] "GET /js/script.js?password=aa5d1382-db0e-4237-9b59-d9cef097d0a3 HTTP/1.1" 200 -
